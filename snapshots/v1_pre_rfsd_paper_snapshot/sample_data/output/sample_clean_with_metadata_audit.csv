@@ -1,0 +1,7 @@
+﻿record_no,physical_line,status,reason,record_id
+1,1,header,csv_reader:parsed_exactly,
+2,2,clean_exact,csv_reader:parsed_exactly,f573a542d2e42e05e017
+3,3,clean_exact,csv_reader:parsed_exactly,968bfe0a214345861951
+4,4,clean_exact,csv_reader:parsed_exactly,51a497779306820ca96b
+5,5,clean_exact,csv_reader:parsed_exactly,68f217bf1bc69482c303
+6,6,clean_exact,csv_reader:parsed_exactly,8157dc61a4788a9ef167

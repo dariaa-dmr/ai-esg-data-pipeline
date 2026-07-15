@@ -1,0 +1,6 @@
+pandas>=1.5
+chardet>=5.0
+clevercsv>=0.8
+requests>=2.31
+tqdm>=4.66
+openpyxl>=3.1

@@ -1,0 +1,13 @@
+﻿order,column_name,data_type,required,stage,description,synthetic_example
+1,SparkMatched,string,yes,size routing,1 when an INN match exists,
+2,SparkMatchStatus,string,conditional,size routing,matched or unmatched,
+3,SparkMatchedAt,string,conditional,size routing,UTC matching timestamp,
+4,SizeFilterStatus,string,yes,size routing,"include, exclude, or review",
+5,SizeFilterReason,string,yes,size routing,Explicit decision reason,
+6,ExcludedFlag,string,conditional,size routing,1 only for exclusion route,
+7,ExclusionReasonCode,string,conditional,size routing,Machine-readable exclusion reason,
+8,ExclusionReasonText,string,conditional,size routing,Human-readable exclusion reason,
+9,ExclusionSource,string,conditional,size routing,Evidence source for exclusion,
+10,ExcludedAt,string,conditional,size routing,UTC exclusion timestamp,
+11,CanBeRestored,string,conditional,size routing,Whether later evidence can restore the row,
+12,RestoreCondition,string,conditional,size routing,Condition required for restoration,

@@ -1,0 +1,13 @@
+﻿order,column_name,data_type,required,stage,description,synthetic_example
+1,id,string,yes,strict public map export,Stable public row identifier,f573a542d2e42e05e017
+2,title,string,yes,strict public map export,Public company title,ООО 'Северный Водоканал Тест'
+3,lat,string,yes,strict public map export,Latitude,59.3761
+4,lon,string,yes,strict public map export,Longitude,28.6123
+5,address,string,yes,strict public map export,Normalized address,188000 Ленинградская область г. Синтетический ул. Примерная д. 1
+6,description,string,yes,strict public map export,Factual public description,ООО «Северный Водоканал Тест» зарегистрировано в 2012 году в Ленинградской области и представлено в наборе как синтетический оператор водоснабжения. Деятельность примера связана с учебной моделью коммунальной инфраструктуры региона и не описывает реально существующую организацию. В демонстрационном наборе компания управляет условной сетью забора очистки и распределения воды что позволяет проверить отраслевые и географические поля. Численность работников — около 145 человек за 2024 год выручка — около 0 75 млрд руб. за 2024 год.
+7,inn,string,yes,strict public map export,Taxpayer identifier,0000000001
+8,region,string,yes,strict public map export,Registration or normalized region,Ленинградская область
+9,industry,string,yes,strict public map export,Industry,Utilities
+10,subindustry,string,yes,strict public map export,Subindustry,Water supply
+11,website,string,yes,strict public map export,Company website,north-water.synthetic.example
+12,description_status,string,yes,strict public map export,Description quality status,ok

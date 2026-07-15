@@ -1,0 +1,13 @@
+﻿order,column_name,data_type,required,stage,description,synthetic_example
+1,Sector,string,yes,source,High-level sector,Infrastructure
+2,Industry,string,yes,source,Industry classification,Utilities
+3,Subindustry,string,yes,source,Detailed activity group,Water supply
+4,CompanyName,string,yes,source,Display name,"Северный Водоканал Тест, ООО"
+5,CompanyNameOfficial,string,yes,source,Official legal name,"ООО ""Северный Водоканал Тест"""
+6,INN,string,yes,source,Taxpayer identifier used for matching,0000000001
+7,RegionRegistration,string,yes,source,Legal registration region,Ленинградская область
+8,RegionHeadOffice,string,yes,source,Head-office region,Ленинградская область
+9,RegionOperation,string,yes,source,Operating geography,Ленинградская область
+10,Description,string,yes,source,Source-stage factual description,"Синтетическая организация создана для демонстрации обработки CSV, обогащения и маршрутизации записей. Она управляет учебной моделью сети водоснабжения и не представляет реально существующую компанию."
+11,URL,string,yes,source,Company or evidence URL,https://north-water.synthetic.example
+12,Source,string,yes,source,Source attribution,synthetic example only

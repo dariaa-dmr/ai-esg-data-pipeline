@@ -1,0 +1,19 @@
+﻿order,column_name,data_type,required,stage,description,synthetic_example
+1,INN,string,yes,v0 final active,Normalized final active field,0000000001
+2,CompanyNameOfficial,string,yes,v0 final active,Normalized final active field,ООО «Северный Водоканал Тест»
+3,CompanyName,string,conditional,v0 final active,Normalized final active field,Северный Водоканал Тест
+4,CompanyNameVariants,string,conditional,v0 final active,Normalized final active field,"Северный Водоканал Тест, ООО «Северный Водоканал Тест»"
+5,CompanyDescription,string,conditional,v0 final active,Normalized final active field,"Синтетическая организация создана для демонстрации обработки CSV, обогащения и маршрутизации записей. Она управляет учебной моделью сети водоснабжения и не представляет реально существующую компанию."
+6,CompanyEmployees,string,conditional,v0 final active,Normalized final active field,145
+7,CompanyRevenue,string,conditional,v0 final active,Normalized final active field,0.75
+8,Address_dadata,string,conditional,v0 final active,Normalized final active field,"188000, Ленинградская область, г. Синтетический, ул. Примерная, д. 1"
+9,RegionFromAddress,string,conditional,v0 final active,Normalized final active field,Ленинградская область
+10,lat_dadata,string,conditional,v0 final active,Normalized final active field,59.376100
+11,lon_dadata,string,conditional,v0 final active,Normalized final active field,28.612300
+12,Website,string,conditional,v0 final active,Normalized final active field,north-water.synthetic.example
+13,Sector,string,yes,v0 final active,Normalized final active field,Infrastructure
+14,Industry,string,yes,v0 final active,Normalized final active field,Utilities
+15,Subindustry,string,yes,v0 final active,Normalized final active field,Water supply
+16,OKVED_dadata,string,conditional,v0 final active,Normalized final active field,36.00
+17,Source,string,conditional,v0 final active,Normalized final active field,synthetic example only
+18,is_active,string,conditional,v0 final active,Normalized final active field,1

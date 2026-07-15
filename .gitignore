@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.venv/
+venv/
+env/
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+config.ini
+config.local.ini
+secrets/
+*.pem
+*.key
+
+# Logs and caches
+logs/
+*.log
+cache/
+*.sqlite
+*.sqlite3
+*.db
+
+# Working pipeline data
+incoming/
+retry/
+clean/
+dirty/
+enriched/
+geo/
+final/
+grouped/
+grouped_from_clean/
+backup/
+archive/
+review/
+excluded/
+
+# Proprietary SPARK working data
+spark/incoming/
+spark/unpacked/
+spark/extracted/
+spark/matched/
+*.xml
+*.html
+*.htm
+*.xls
+*.xlsx
+
+# Archives and large local packages
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+
+# Generated safety reports
+tools/*_scan.json
+tools/*_scan.md
+!tools/repo_safety_scan.py

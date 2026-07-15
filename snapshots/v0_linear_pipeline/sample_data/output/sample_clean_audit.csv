@@ -1,0 +1,5 @@
+﻿record_no,physical_line,status,reason
+1,1,header,csv_reader:parsed_exactly
+2,2,clean,csv_reader:parsed_exactly
+3,3,clean,csv_reader:parsed_exactly
+4,4,clean,csv_reader:parsed_exactly

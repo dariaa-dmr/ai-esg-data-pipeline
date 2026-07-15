@@ -1,0 +1,42 @@
+﻿order,column_name,data_type,required,stage,description,synthetic_example
+1,INN,string,yes,offline SPARK-like extract,Normalized identifier for offline matching,0000000001
+2,SparkID,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,SYN-001
+3,SparkSourceFile,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,synthetic/SYN-001.xml
+4,SparkExtractionMethod,string,conditional,offline SPARK-like extract,Deterministic or table extraction method,synthetic_table
+5,SparkExtractionStatus,string,yes,offline SPARK-like extract,Structured SPARK-like extracted field,ok
+6,SparkExtractionIssues,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,
+7,SparkExtractionConfidence,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,high
+8,SparkReportActualDate,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,2025-01-15
+9,SparkShortName,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,Северный Водоканал Тест
+10,SparkFullName,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,ООО «Северный Водоканал Тест»
+11,SparkNormName,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,СЕВЕРНЫЙ ВОДОКАНАЛ ТЕСТ
+12,SparkStatus,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,Действующая
+13,SparkStatusCode,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,ACTIVE
+14,SparkIsActing,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,1
+15,SparkDateFirstReg,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,2012-04-18
+16,CompanyFoundedYear,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,2012
+17,SparkRegion,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,Ленинградская область
+18,SparkCity,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,Синтетический
+19,SparkRegionCode,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,47
+20,SparkAddress,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,"Ленинградская область, г. Синтетический, ул. Примерная, д. 1"
+21,SparkLatitude,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,59.376100
+22,SparkLongitude,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,28.612300
+23,SparkWebsite,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,north-water.synthetic.example
+24,SparkOKVEDMainCode,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,36.00
+25,SparkOKVEDMainName,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,"Забор, очистка и распределение воды"
+26,CompanyEmployees,string,conditional,offline SPARK-like extract,Employee count,145
+27,CompanyEmployeesYear,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,2024
+28,CompanyEmployeesDate,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,2024-12-31
+29,CompanyEmployeesSource,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,synthetic_staff_field
+30,CompanyRevenueRawRUB,string,conditional,offline SPARK-like extract,Revenue in rubles,750000000
+31,CompanyRevenue,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,0.75
+32,CompanyRevenueUnitOriginal,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,rub
+33,CompanyRevenueYear,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,2024
+34,CompanyRevenueSource,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,synthetic_finance_field
+35,CompanyRevenueEvidence,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,synthetic revenue evidence
+36,CompanyBudgetRawRUB,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,
+37,CompanyBudget,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,
+38,CompanyBudgetYear,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,
+39,CompanyBudgetSource,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,
+40,SparkEvidenceText,string,conditional,offline SPARK-like extract,Compact extracted evidence summary,employees=145; revenue_raw_rub=750000000
+41,ExtractedAt,string,conditional,offline SPARK-like extract,Structured SPARK-like extracted field,2025-01-15T00:00:00+00:00
