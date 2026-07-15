@@ -1,0 +1,357 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#111"/>
+  </marker>
+  <style>
+    .box { fill:#fff; stroke:#111; stroke-width:2; }
+    .dash { fill:#fff; stroke:#111; stroke-width:2; stroke-dasharray:8 6; }
+    .line { fill:none; stroke:#111; stroke-width:2; }
+    .arrow { fill:none; stroke:#111; stroke-width:2; marker-end:url(#arrow); }
+    .dashline { fill:none; stroke:#111; stroke-width:2; stroke-dasharray:8 6; }
+    .dasharrow { fill:none; stroke:#111; stroke-width:2; stroke-dasharray:8 6; marker-end:url(#arrow); }
+    text { font-family: Arial, Helvetica, sans-serif; fill:#111; }
+    .title { font-size:24px; font-weight:700; }
+    .section { font-size:16px; font-weight:700; }
+    .body { font-size:14px; }
+    .small { font-size:12px; }
+    .tiny { font-size:11px; }
+    .file { font-weight:700; }
+  </style>
+</defs>
+
+<rect x="0" y="0" width="1600" height="1200" fill="#fff"/>
+<g id="fig1">
+<text x="800.0" y="34" text-anchor="middle" font-size="24px">
+<tspan x="800.0" dy="0" font-weight="700">Fig. 1. CSV FILE STRUCTURE ERROR-HANDLING WORKFLOW</tspan>
+</text>
+<rect class="box" x="140" y="70" width="170" height="88" rx="8" ry="8"/>
+<rect class="dash" x="385" y="65" width="175" height="105" rx="8" ry="8"/>
+<rect class="box" x="650" y="65" width="175" height="105" rx="8" ry="8"/>
+<rect class="box" x="925" y="55" width="155" height="70" rx="8" ry="8"/>
+<rect class="box" x="925" y="145" width="155" height="70" rx="8" ry="8"/>
+<rect class="dash" x="1230" y="135" width="210" height="115" rx="8" ry="8"/>
+<rect class="box" x="910" y="245" width="185" height="88" rx="8" ry="8"/>
+<rect class="box" x="910" y="355" width="185" height="70" rx="8" ry="8"/>
+<text x="225.0" y="100.9" text-anchor="middle" font-size="14px">
+<tspan x="225.0" dy="0" font-weight="700">incoming/</tspan>
+<tspan x="225.0" dy="18">Input CSV files</tspan>
+<tspan x="225.0" dy="18">from LLM</tspan>
+</text>
+<text x="472.5" y="104.4" text-anchor="middle" font-size="14px">
+<tspan x="472.5" dy="0" font-weight="700">backup/source/</tspan>
+<tspan x="472.5" dy="18">Self-copy of source</tspan>
+<tspan x="472.5" dy="18">file + timestamp</tspan>
+</text>
+<text x="737.5" y="104.4" text-anchor="middle" font-size="14px">
+<tspan x="737.5" dy="0" font-weight="700">csv_splitter.py</tspan>
+<tspan x="737.5" dy="18">Line-by-line splitting</tspan>
+<tspan x="737.5" dy="18">and row structure check</tspan>
+</text>
+<text x="1002.5" y="85.4" text-anchor="middle" font-size="14px">
+<tspan x="1002.5" dy="0" font-weight="700">clean/</tspan>
+<tspan x="1002.5" dy="19">Valid rows</tspan>
+</text>
+<text x="1002.5" y="175.4" text-anchor="middle" font-size="14px">
+<tspan x="1002.5" dy="0" font-weight="700">dirty/</tspan>
+<tspan x="1002.5" dy="19">Problematic rows</tspan>
+</text>
+<text x="1002.5" y="269.55" text-anchor="middle" font-size="13px">
+<tspan x="1002.5" dy="0" font-weight="700">Manual correction</tspan>
+<tspan x="1002.5" dy="16">Analysis and correction</tspan>
+<tspan x="1002.5" dy="16">of problematic rows</tspan>
+<tspan x="1002.5" dy="16">(by a human)</tspan>
+</text>
+<text x="1002.5" y="378.55" text-anchor="middle" font-size="13px">
+<tspan x="1002.5" dy="0" font-weight="700">retry/</tspan>
+<tspan x="1002.5" dy="16">Corrected rows</tspan>
+<tspan x="1002.5" dy="16">after manual editing</tspan>
+</text>
+<text x="1335.0" y="179.05" text-anchor="middle" font-size="13px">
+<tspan x="1335.0" dy="0">For records from dirty/</tspan>
+<tspan x="1335.0" dy="18">additional fields are saved:</tspan>
+<tspan x="1335.0" dy="18">raw_line, dirty_reason</tspan>
+</text>
+<path class="arrow" d="M 310 114 L 385 114"/>
+<path class="arrow" d="M 560 117 L 650 117"/>
+<path class="arrow" d="M 825 117 L 870 117 L 870 90 L 925 90"/>
+<path class="arrow" d="M 825 117 L 870 117 L 870 180 L 925 180"/>
+<path class="arrow" d="M 1002 215 L 1002 245"/>
+<path class="arrow" d="M 1002 333 L 1002 355"/>
+<path class="dashline" d="M 1080 180 L 1230 180"/>
+<path class="dasharrow" d="M 1002 425 L 1002 450 L 220 450 L 220 158"/>
+<path class="dashline" d="M 472 170 L 472 235"/>
+<text x="472" y="258" text-anchor="middle" font-size="13px">
+<tspan x="472" dy="0" font-weight="700">Dead-end branch</tspan>
+<tspan x="472" dy="17">Used only for storing</tspan>
+<tspan x="472" dy="17">source file copies.</tspan>
+</text>
+</g>
+<path class="line" d="M 40 475 L 1560 475"/>
+<text x="800.0" y="510" text-anchor="middle" font-size="24px">
+<tspan x="800.0" dy="0" font-weight="700">Fig. 2. COMPLETE ETL PIPELINE FOR PREPARING COMPANY DATA</tspan>
+</text>
+<g id="fig2">
+<rect class="box" x="45" y="530" width="230" height="495" rx="10" ry="10"/>
+<text x="68" y="566" text-anchor="middle" font-size="26px">
+<tspan x="68" dy="0" font-weight="700">1</tspan>
+</text>
+<rect class="box" x="295" y="530" width="230" height="495" rx="10" ry="10"/>
+<text x="318" y="566" text-anchor="middle" font-size="26px">
+<tspan x="318" dy="0" font-weight="700">2</tspan>
+</text>
+<rect class="box" x="545" y="530" width="230" height="495" rx="10" ry="10"/>
+<text x="568" y="566" text-anchor="middle" font-size="26px">
+<tspan x="568" dy="0" font-weight="700">3</tspan>
+</text>
+<rect class="box" x="795" y="530" width="230" height="495" rx="10" ry="10"/>
+<text x="818" y="566" text-anchor="middle" font-size="26px">
+<tspan x="818" dy="0" font-weight="700">4</tspan>
+</text>
+<rect class="box" x="1045" y="530" width="230" height="495" rx="10" ry="10"/>
+<text x="1068" y="566" text-anchor="middle" font-size="26px">
+<tspan x="1068" dy="0" font-weight="700">5</tspan>
+</text>
+<rect class="box" x="1295" y="530" width="230" height="495" rx="10" ry="10"/>
+<text x="1318" y="566" text-anchor="middle" font-size="26px">
+<tspan x="1318" dy="0" font-weight="700">6</tspan>
+</text>
+<text x="175" y="564" text-anchor="middle" font-size="15px">
+<tspan x="175" dy="0" font-weight="700">DATA COLLECTION</tspan>
+<tspan x="175" dy="18" font-weight="700">VIA LLM</tspan>
+</text>
+<text x="425" y="564" text-anchor="middle" font-size="15px">
+<tspan x="425" dy="0" font-weight="700">CSV FILE</tspan>
+<tspan x="425" dy="18" font-weight="700">VERSIONING</tspan>
+</text>
+<text x="675" y="564" text-anchor="middle" font-size="15px">
+<tspan x="675" dy="0" font-weight="700">CSV FILE</tspan>
+<tspan x="675" dy="18" font-weight="700">ERROR HANDLING</tspan>
+</text>
+<text x="925" y="554" text-anchor="middle" font-size="14px">
+<tspan x="925" dy="0" font-weight="700">VERIFICATION,</tspan>
+<tspan x="925" dy="17" font-weight="700">GEOCODING</tspan>
+<tspan x="925" dy="17" font-weight="700">AND ENRICHMENT</tspan>
+</text>
+<text x="1175" y="548" text-anchor="middle" font-size="14px">
+<tspan x="1175" dy="0" font-weight="700">INTEGRITY CONTROL,</tspan>
+<tspan x="1175" dy="17" font-weight="700">DEDUPLICATION, AND</tspan>
+<tspan x="1175" dy="17" font-weight="700">DATA RECOVERY</tspan>
+</text>
+<text x="1425" y="554" text-anchor="middle" font-size="14px">
+<tspan x="1425" dy="0" font-weight="700">FINAL ASSEMBLY</tspan>
+<tspan x="1425" dy="17" font-weight="700">AND ANALYTICAL LAYER</tspan>
+</text>
+<rect class="box" x="59" y="595" width="202" height="82" rx="8" ry="8"/>
+<rect class="box" x="59" y="695" width="202" height="82" rx="8" ry="8"/>
+<rect class="box" x="59" y="795" width="202" height="62" rx="8" ry="8"/>
+<rect class="box" x="59" y="875" width="202" height="92" rx="8" ry="8"/>
+<text x="160.0" y="623.55" text-anchor="middle" font-size="13px">
+<tspan x="160.0" dy="0" font-weight="700">Prompt generation</tspan>
+<tspan x="160.0" dy="17">by sectors, industries,</tspan>
+<tspan x="160.0" dy="17">regions, etc.</tspan>
+</text>
+<text x="160.0" y="723.55" text-anchor="middle" font-size="13px">
+<tspan x="160.0" dy="0" font-weight="700">INN blacklist</tspan>
+<tspan x="160.0" dy="17">(exclude already</tspan>
+<tspan x="160.0" dy="17">collected organizations)</tspan>
+</text>
+<text x="160.0" y="830.55" text-anchor="middle" font-size="13px">
+<tspan x="160.0" dy="0">LLM — company collection</tspan>
+</text>
+<text x="160.0" y="908.55" text-anchor="middle" font-size="13px">
+<tspan x="160.0" dy="0" font-weight="700">Output: CSV file</tspan>
+<tspan x="160.0" dy="17">with candidates and</tspan>
+<tspan x="160.0" dy="17">descriptions</tspan>
+</text>
+<rect class="box" x="309" y="595" width="202" height="82" rx="8" ry="8"/>
+<rect class="box" x="309" y="695" width="202" height="82" rx="8" ry="8"/>
+<rect class="box" x="309" y="795" width="202" height="82" rx="8" ry="8"/>
+<rect class="box" x="309" y="895" width="202" height="96" rx="8" ry="8"/>
+<text x="410.0" y="623.55" text-anchor="middle" font-size="13px">
+<tspan x="410.0" dy="0" font-weight="700">incoming/</tspan>
+<tspan x="410.0" dy="17">Input CSV files</tspan>
+<tspan x="410.0" dy="17">of the current cycle</tspan>
+</text>
+<text x="410.0" y="723.55" text-anchor="middle" font-size="13px">
+<tspan x="410.0" dy="0" font-weight="700">backup/source/</tspan>
+<tspan x="410.0" dy="17">Self-copy of source file</tspan>
+<tspan x="410.0" dy="17">+ timestamp</tspan>
+</text>
+<text x="410.0" y="823.55" text-anchor="middle" font-size="13px">
+<tspan x="410.0" dy="0" font-weight="700">archive/</tspan>
+<tspan x="410.0" dy="17">Archive of successfully</tspan>
+<tspan x="410.0" dy="17">processed files</tspan>
+</text>
+<text x="410.0" y="930.375" text-anchor="middle" font-size="12.5px">
+<tspan x="410.0" dy="0" font-weight="700">Source files</tspan>
+<tspan x="410.0" dy="17">are not merged with each other</tspan>
+<tspan x="410.0" dy="17">before processing</tspan>
+</text>
+<rect class="box" x="559" y="595" width="202" height="80" rx="8" ry="8"/>
+<text x="660.0" y="622.55" text-anchor="middle" font-size="13px">
+<tspan x="660.0" dy="0" font-weight="700">csv_splitter.py</tspan>
+<tspan x="660.0" dy="17">Line-by-line splitting</tspan>
+<tspan x="660.0" dy="17">and row structure check</tspan>
+</text>
+<rect class="box" x="559" y="695" width="95" height="72" rx="8" ry="8"/>
+<rect class="box" x="666" y="695" width="95" height="72" rx="8" ry="8"/>
+<text x="606.5" y="726.875" text-anchor="middle" font-size="12.5px">
+<tspan x="606.5" dy="0" font-weight="700">clean/</tspan>
+<tspan x="606.5" dy="17">Valid rows</tspan>
+</text>
+<text x="713.5" y="726.875" text-anchor="middle" font-size="12.5px">
+<tspan x="713.5" dy="0" font-weight="700">dirty/</tspan>
+<tspan x="713.5" dy="17">Problematic rows</tspan>
+</text>
+<path class="arrow" d="M 660 675 L 660 684 L 606 684 L 606 695"/>
+<path class="arrow" d="M 660 675 L 660 684 L 713 684 L 713 695"/>
+<rect class="box" x="559" y="785" width="202" height="92" rx="8" ry="8"/>
+<text x="660.0" y="811.375" text-anchor="middle" font-size="12.5px">
+<tspan x="660.0" dy="0" font-weight="700">Manual correction</tspan>
+<tspan x="660.0" dy="16">Analysis and correction</tspan>
+<tspan x="660.0" dy="16">of problematic rows</tspan>
+<tspan x="660.0" dy="16">(by a human)</tspan>
+</text>
+<path class="arrow" d="M 713 767 L 713 785"/>
+<rect class="box" x="559" y="895" width="202" height="72" rx="8" ry="8"/>
+<text x="660.0" y="919.375" text-anchor="middle" font-size="12.5px">
+<tspan x="660.0" dy="0" font-weight="700">retry/</tspan>
+<tspan x="660.0" dy="16">Corrected rows</tspan>
+<tspan x="660.0" dy="16">after manual editing</tspan>
+</text>
+<path class="arrow" d="M 660 877 L 660 895"/>
+<rect class="dash" x="559" y="980" width="202" height="34" rx="8" ry="8"/>
+<text x="660.0" y="1001.025" text-anchor="middle" font-size="11.5px">
+<tspan x="660.0" dy="0">Return to incoming/ for reprocessing</tspan>
+</text>
+<path class="dasharrow" d="M 660 967 L 660 980"/>
+<rect class="box" x="809" y="595" width="202" height="150" rx="8" ry="8"/>
+<text x="910" y="618" text-anchor="middle" font-size="12.5px">
+<tspan x="910" dy="0" font-weight="700">Validation via Dadata</tspan>
+<tspan x="910" dy="17">by INN (primary key)</tspan>
+</text>
+<line class="dashline" x1="817" y1="650" x2="1003" y2="650"/>
+<text x="910" y="675" text-anchor="middle" font-size="11.3px">
+<tspan x="910" dy="0" font-style="italic">Result: enriched/</tspan>
+<tspan x="910" dy="16">INN Status, CompanyNameOfficial,</tspan>
+<tspan x="910" dy="16">AddressFull, RegionRegistration,</tspan>
+<tspan x="910" dy="16">DadataLat, DadataLon</tspan>
+</text>
+<rect class="box" x="809" y="760" width="202" height="155" rx="8" ry="8"/>
+<text x="910" y="785" text-anchor="middle" font-size="12.2px">
+<tspan x="910" dy="0" font-weight="700">Geocoding</tspan>
+<tspan x="910" dy="17">Dadata → Yandex Geocoder</tspan>
+<tspan x="910" dy="17">(backup source)</tspan>
+</text>
+<line class="dashline" x1="817" y1="825" x2="1003" y2="825"/>
+<text x="910" y="850" text-anchor="middle" font-size="11.3px">
+<tspan x="910" dy="0" font-style="italic">Result: geo/</tspan>
+<tspan x="910" dy="16">Latitude, Longitude,</tspan>
+<tspan x="910" dy="16">GeoSource, GeoAddress,</tspan>
+<tspan x="910" dy="16">GeoStatus</tspan>
+</text>
+<rect class="box" x="809" y="930" width="202" height="84" rx="8" ry="8"/>
+<text x="910" y="954" text-anchor="middle" font-size="12.2px">
+<tspan x="910" dy="0" font-weight="700">Enrichment via SPARK</tspan>
+<tspan x="910" dy="17">by INN</tspan>
+</text>
+<line class="dashline" x1="817" y1="977" x2="1003" y2="977"/>
+<text x="910" y="998" text-anchor="middle" font-size="11.5px">
+<tspan x="910" dy="0">Revenue, Employees</tspan>
+</text>
+<rect class="box" x="1059" y="595" width="202" height="419" rx="8" ry="8"/>
+<text x="1160" y="618" text-anchor="middle" font-size="12.2px">
+<tspan x="1160" dy="0" font-weight="700">integrity_check.py</tspan>
+<tspan x="1160" dy="17">Validation of key columns</tspan>
+<tspan x="1160" dy="17">and recovery from clean/</tspan>
+<tspan x="1160" dy="17">by INN when needed</tspan>
+</text>
+<line class="dashline" x1="1067" y1="684" x2="1253" y2="684"/>
+<text x="1160" y="710" text-anchor="middle" font-size="11.8px">
+<tspan x="1160" dy="0" font-weight="700">Recoverable fields:</tspan>
+<tspan x="1160" dy="17">Sector, Industry, Subindustry,</tspan>
+<tspan x="1160" dy="17">RegionRegistration, Source</tspan>
+</text>
+<line class="dashline" x1="1067" y1="760" x2="1253" y2="760"/>
+<text x="1160" y="786" text-anchor="middle" font-size="11.8px">
+<tspan x="1160" dy="0" font-weight="700">Deduplication by INN</tspan>
+<tspan x="1160" dy="17">(choose the most</tspan>
+<tspan x="1160" dy="17">complete record)</tspan>
+</text>
+<line class="dashline" x1="1067" y1="845" x2="1253" y2="845"/>
+<text x="1160" y="875" text-anchor="middle" font-size="11.8px">
+<tspan x="1160" dy="0" font-weight="700">Filter by ACTIVE status</tspan>
+<tspan x="1160" dy="17">(active companies)</tspan>
+</text>
+<rect class="box" x="1309" y="595" width="202" height="160" rx="8" ry="8"/>
+<text x="1410" y="618" text-anchor="middle" font-size="11.4px">
+<tspan x="1410" dy="0" font-weight="700">final_enrich_and_group.py</tspan>
+<tspan x="1410" dy="16">Merge data from</tspan>
+<tspan x="1410" dy="16">clean/ + enriched/ + geo/</tspan>
+<tspan x="1410" dy="16">+ SPARK</tspan>
+</text>
+<line class="dashline" x1="1317" y1="678" x2="1503" y2="678"/>
+<text x="1410" y="703" text-anchor="middle" font-size="11.4px">
+<tspan x="1410" dy="0">Cleanup of Source fields,</tspan>
+<tspan x="1410" dy="16">final deduplication,</tspan>
+<tspan x="1410" dy="16">ACTIVE check</tspan>
+</text>
+<rect class="box" x="1309" y="770" width="202" height="62" rx="8" ry="8"/>
+<text x="1410.0" y="797.13" text-anchor="middle" font-size="11.8px">
+<tspan x="1410.0" dy="0" font-weight="700">Output: final/</tspan>
+<tspan x="1410.0" dy="16">all_companies_enriched.csv</tspan>
+</text>
+<rect class="box" x="1309" y="845" width="202" height="88" rx="8" ry="8"/>
+<text x="1410.0" y="877.78" text-anchor="middle" font-size="10.8px">
+<tspan x="1410.0" dy="0" font-weight="700">grouped_by_region/</tspan>
+<tspan x="1410.0" dy="15">Grouping by federal district, regions,</tspan>
+<tspan x="1410.0" dy="15">sectors, industries, subindustries</tspan>
+</text>
+<rect class="box" x="1309" y="945" width="202" height="69" rx="8" ry="8"/>
+<text x="1324" y="968" text-anchor="start" font-size="11.4px">
+<tspan x="1324" dy="0" font-weight="700">Usage:</tspan>
+<tspan x="1324" dy="15">• ESG analytics</tspan>
+<tspan x="1324" dy="15">• Analytics</tspan>
+<tspan x="1324" dy="15">• Interactive map</tspan>
+</text>
+<path class="arrow" d="M 275 760 L 295 760"/>
+<path class="arrow" d="M 525 760 L 545 760"/>
+<path class="arrow" d="M 775 760 L 795 760"/>
+<path class="arrow" d="M 1025 760 L 1045 760"/>
+<path class="arrow" d="M 1275 760 L 1295 760"/>
+<rect class="dash" x="120" y="1050" width="1360" height="115" rx="10" ry="10"/>
+<ellipse cx="175" cy="1080" rx="19.8" ry="7.2" fill="#fff" stroke="#111" stroke-width="2"/>
+<path d="M 155.2 1080 L 155.2 1117.8 C 155.2 1126.8, 194.8 1126.8, 194.8 1117.8 L 194.8 1080" fill="#fff" stroke="#111" stroke-width="2"/>
+<path d="M 155.2 1098.0 C 155.2 1107.0, 194.8 1107.0, 194.8 1098.0" fill="none" stroke="#111" stroke-width="2"/>
+<text x="225" y="1080" text-anchor="start" font-size="12.5px">
+<tspan x="225" dy="0" font-weight="700">backup/</tspan>
+<tspan x="225" dy="17">Backup copies</tspan>
+<tspan x="225" dy="17">of source files</tspan>
+</text>
+<path d="M 496.6 1091.0 L 496.6 1078.4 Q 496.6 1073.0 502.0 1073.0 L 515.5 1073.0 L 521.8 1080.2 L 545.2 1080.2 Q 548.8 1080.2 548.8 1084.7 L 545.2 1119.8 Q 544.3 1125.2 538.0 1125.2 L 502.0 1125.2 Q 496.6 1125.2 496.6 1119.8 Z" fill="#fff" stroke="#111" stroke-width="2"/>
+<text x="570" y="1080" text-anchor="start" font-size="12.5px">
+<tspan x="570" dy="0" font-weight="700">archive/</tspan>
+<tspan x="570" dy="17">Archive of successfully</tspan>
+<tspan x="570" dy="17">processed files</tspan>
+</text>
+<path d="M 838.8 1069.2 L 864.0 1069.2 L 874.8 1080 L 874.8 1123.2 L 838.8 1123.2 Z" fill="#fff" stroke="#111" stroke-width="2"/>
+<path d="M 864.0 1069.2 L 864.0 1080 L 874.8 1080" fill="none" stroke="#111" stroke-width="2"/>
+<path class="line" d="M 846.9 1090.8 L 866.7 1090.8"/>
+<path class="line" d="M 846.9 1099.8 L 866.7 1099.8"/>
+<path class="line" d="M 846.9 1108.8 L 866.7 1108.8"/>
+<text x="900" y="1080" text-anchor="start" font-size="12.5px">
+<tspan x="900" dy="0" font-weight="700">logs/</tspan>
+<tspan x="900" dy="17">Pipeline run logs</tspan>
+</text>
+<ellipse cx="1170" cy="1080" rx="19.8" ry="7.2" fill="#fff" stroke="#111" stroke-width="2"/>
+<path d="M 1150.2 1080 L 1150.2 1117.8 C 1150.2 1126.8, 1189.8 1126.8, 1189.8 1117.8 L 1189.8 1080" fill="#fff" stroke="#111" stroke-width="2"/>
+<path d="M 1150.2 1098.0 C 1150.2 1107.0, 1189.8 1107.0, 1189.8 1098.0" fill="none" stroke="#111" stroke-width="2"/>
+<text x="1218" y="1080" text-anchor="start" font-size="12.5px">
+<tspan x="1218" dy="0" font-weight="700">cache/</tspan>
+<tspan x="1218" dy="17">SQLite cache</tspan>
+<tspan x="1218" dy="17">of API requests</tspan>
+<tspan x="1218" dy="17">(Dadata, Yandex, SPARK)</tspan>
+</text>
+</g>
+</svg>
